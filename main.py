@@ -1,7 +1,8 @@
 import discord #On importe la librairie
+import config.json
 from discord.ext import commands
 
-bot = commands.Bot(command_prefix="t", description=None) #On définit le préfixe du bot
+bot = commands.Bot(command_prefix=config.prefix, description=None) #On définit le préfixe du bot
 
 @bot.event
 async def on_ready():
