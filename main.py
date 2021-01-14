@@ -12,5 +12,9 @@ async def on_ready():
 async def close(ctx): #Commande pour éteindre le bot
     await ctx.send("Le bot va s'éteindre")
     await bot.close()
+    
+@bot.command()
+async def test(ctx):
+    await ctx.send("Test")
 
 bot.run(config.token) #Le bot va se lancer grâce au token
